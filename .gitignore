@@ -1,0 +1,16 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Node files
+node_modules
+.DS_Store
+storybook-static
+.yarn
+yarn-error.log
+/.yarnrc
+
+.now
+/.env

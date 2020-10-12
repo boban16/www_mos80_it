@@ -1,0 +1,86 @@
+{
+  "name": "@pagerland/templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn workspace @pagerland/next dev",
+    "build": "yarn workspace @pagerland/next build",
+    "start": "yarn workspace @pagerland/next start",
+    "docs": "yarn workspace @pagerland/docs storybook",
+    "pre-commit": "lint-staged"
+  },
+  "author": "Pagerland Team",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.9.0",
+    "@storybook/addon-actions": "5.3.18",
+    "@storybook/addon-docs": "5.3.18",
+    "@storybook/addon-info": "5.3.18",
+    "@storybook/addon-links": "5.3.18",
+    "@storybook/addons": "5.3.18",
+    "@storybook/react": "5.3.18",
+    "@syncfusion/ej2-base": "^18.1.52",
+    "@syncfusion/ej2-data": "^18.1.52",
+    "@syncfusion/ej2-react-calendars": "^18.1.52",
+    "@syncfusion/ej2-react-dropdowns": "^18.1.52",
+    "@syncfusion/ej2-react-inputs": "^18.1.52",
+    "@syncfusion/ej2-react-schedule": "^18.1.52",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "3.0.0",
+    "husky": "4.2.5",
+    "lerna": "3.20.2",
+    "lint-staged": "10.2.0",
+    "now": "18.0.0",
+    "prettier": "2.0.4",
+    "react-bootstrap": "^1.0.1",
+    "react-icons": "^3.10.0",
+    "stylelint": "13.3.3",
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-order": "4.0.0",
+    "stylelint-processor-styled-components": "1.10.0",
+    "reactstrap": "^8.6.0"
+  },
+  "bin": {
+    "pagerland-init": "./packages/cli/index.js"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint",
+      "stylelint"
+    ],
+    "*.{css,scss}": [
+      "prettier --write",
+      "stylelint"
+    ],
+    "*.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ],
+    "*.graphql": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "cldr-data": "^36.0.0",
+    "react-iframe": "^1.8.0"
+  }
+}

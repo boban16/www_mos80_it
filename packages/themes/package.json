@@ -1,0 +1,15 @@
+{
+  "name": "@pagerland/themes",
+  "version": "1.0.0",
+  "description": "Pagerland Team",
+  "main": "src/index.js",
+  "author": "Pagerland Team",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polished": "3.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-scroll-parallax": "2.3.2"
+  }
+}

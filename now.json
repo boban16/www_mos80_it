@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "packages/api/**/*.js", "use": "@now/node" },
+    { "src": "packages/pagerland-next/package.json", "use": "@now/next" },
+    {
+      "src": "packages/pagerland-gatsby/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    },
+    {
+      "src": "packages/pagerland-landing/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ],
+  "rewrites": [
+    { "source": "/next/(.*)", "destination": "/packages/pagerland-next/$1" },
+    { "source": "/gatsby/(.*)", "destination": "/packages/pagerland-gatsby/$1" },
+    { "source": "/api/(.*)", "destination": "/packages/api/$1.js" },
+    { "source": "/(.*)", "destination": "/packages/pagerland-landing/$1" }
+  ],
+  "build": {
+    "env": {
+      "NEXT_APP_DIR": "/next",
+      "GATSBY_APP_DIR": "/gatsby"
+    }
+  }
+}
